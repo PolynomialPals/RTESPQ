@@ -59,7 +59,7 @@ function getNextQuestion() {
     var quest = selectQuestion();
     updateQuest(quest["q"], quest["a"], quest["b"], quest["c"], quest["d"], quest["answer"]);
     if (quest["pic"] !== "") {
-        document.getElementById("question-image").innerHTML = "<img style='width: 100%' id='stimuli' src='" + quest["pic"] + "'>";
+        document.getElementById("question-image").innerHTML = "<img style='width: 100%' id='stimuli' src='/ref-imgx/" + quest["pic"] + "'>";
     }
     else {
         document.getElementById("question-image").innerHTML = "";
