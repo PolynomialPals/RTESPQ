@@ -30,8 +30,6 @@ function updateQuest(q, a, b, c, d, right) {
 }
 
 function checkRight(e) {
-    console.log("hi");
-    console.log(ans);
     var button = e.target;
     if (button.id === ans) {
         document.getElementById("tic-" + button.id).style.display = "inline-block";
