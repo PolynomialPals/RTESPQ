@@ -65,7 +65,7 @@ function getNextQuestion() {
 }
 
 
-updateQuest("What is 2 + 2 = ?", "00asd sdjansdawdn dawndawiodn awwdmawkd wajkdnawjdna", "1", "2", "4", "d");
+getNextQuestion();
 
 document.getElementById("a").onclick = checkRight;
 document.getElementById("b").onclick = checkRight;
