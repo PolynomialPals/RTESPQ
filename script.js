@@ -3,10 +3,6 @@ var ans;
 var tag;
 var choice = "random";
 
-fetch('tag.json')
-    .then(response => response.json())
-    .then(data => tag = data);
-
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
@@ -46,6 +42,7 @@ function checkRight(e) {
 }
 
 function selectQuestion() {
+    console.log(tag);
     var pool = tag["menu"];
     if (choice === "random") {
         return tag[pool["all"][getRndInteger(0, pool["all"].length)]];
@@ -64,8 +61,16 @@ function getNextQuestion() {
     }
 }
 
+function init() {
+    getNextQuestion();
+}
 
-getNextQuestion();
+
+fetch('tag.json')
+    .then(response => response.json())
+    .then(data => tag = data)
+    .then( () => init());
+
 
 document.getElementById("a").onclick = checkRight;
 document.getElementById("b").onclick = checkRight;
