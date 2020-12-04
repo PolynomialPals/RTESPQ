@@ -122,8 +122,6 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 46%;
-    height: 50px;
-    border: solid 1px peachpuff;
     margin: 0px;
     padding: 0px;
 }
@@ -140,4 +138,44 @@ body {
     padding: 0px;
     display: block;
     width: 100%;
+}
+
+#tips {
+    margin: auto auto;
+    padding: 0px;
+    border: solid 2px #0b3963;
+    border-radius: 5px;
+    background-color: white;
+    width: 196px;
+    height: 146px;
+    display: none;
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: center;
+}
+
+#tip-cover {
+    margin: auto auto;
+    padding: 0px;
+    border: solid 2px #0b3963;
+    border-radius: 5px;
+    background-color: white;
+    width: 200px;
+    height: 150px;
+    font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+}
+
+#tip-cover:hover {
+    background-color: #0b3963;
+    color: white;
+}
+
+#chapter-choice {
+    margin: 15px;
+    font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.5;
+
 }

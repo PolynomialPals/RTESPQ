@@ -2,6 +2,7 @@
 var ans;
 var tag;
 var choice = "random";
+var done = [];
 
 
 function getRndInteger(min, max) {
@@ -17,12 +18,17 @@ function updateQuest(q, a, b, c, d, right) {
     ans = right;
     var resp = document.getElementsByClassName("cross");
     var buttons = document.getElementsByClassName("choice");
-    for (i=0; i<resp.length; i++) {
+    for (var i=0; i<resp.length; i++) {
         resp[i].style.display = "none";
     }
-    for (i=0; i<buttons.length; i++) {
+    for (var i=0; i<buttons.length; i++) {
         buttons[i].disabled = false;
     }
+}
+
+function setTips() {
+    document.getElementById("tip-cover").style.display = "none";
+    document.getElementById("tips").style.display = "block";
 }
 
 function checkRight(e) {
@@ -39,14 +45,17 @@ function checkRight(e) {
         g[i].disabled = true;
     }
     document.getElementById("next").style.display = "block";
+    setTips();
 }
 
 function selectQuestion() {
-    console.log(tag);
-    var pool = tag["menu"];
     if (choice === "random") {
-        return tag[pool["all"][getRndInteger(0, pool["all"].length)]];
+        var pool = tag["menu"]["all"];
     }
+    else if (choice === "random-cat") {
+
+    }
+    return tag[pool[getRndInteger(0, pool.length)]];
 }
 
 function getNextQuestion() {
@@ -59,6 +68,10 @@ function getNextQuestion() {
     else {
         document.getElementById("question-image").innerHTML = "";
     }
+    document.getElementById("tips").style.display = "none";
+    document.getElementById("tip-cover").style.display = "block";
+    document.getElementById("chapter-val").textContent = quest["cpt"];
+    document.getElementById("page-val").textContent = quest["page"];
 }
 
 function init() {
@@ -77,3 +90,4 @@ document.getElementById("b").onclick = checkRight;
 document.getElementById("c").onclick = checkRight;
 document.getElementById("d").onclick = checkRight;
 document.getElementById("next").onclick = getNextQuestion;
+document.getElementById("tip-cover").onclick = setTips;
