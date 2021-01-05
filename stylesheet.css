@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -33,10 +34,14 @@ body {
 #left-col {
     margin: 0px;
     padding: 0px;
-    width: 20%;
-    height: 600px;
+    padding-bottom: 5px;
+    width: 18%;
     display: inline-block;
-    background-color: antiquewhite;
+}
+
+#main-section {
+    background-color: rgb(222, 222, 222);
+    min-height: calc(100vh - 35px);
 }
 
 #content {
@@ -45,8 +50,9 @@ body {
     background-color: rgb(233, 255, 255);
     display: inline-block;
     vertical-align: top;
-    width: 78%;
-    height: 600px;
+    width: 80%;
+    height: max-content;
+    min-height: calc(100vh - 35px);
     font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
 }
 
@@ -68,6 +74,7 @@ body {
     font-weight: normal;
     margin: 10px 20px;
 }
+
 .choice {
     width: 80%;
     white-space: normal;
@@ -124,19 +131,28 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 46%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 10px 0px;
 }
 
-#question-image {
+#code-container {
+    display: block;
+    margin: 0px 0px 20px 0px;
+    padding: 5px;
+    white-space: pre-wrap;
+    font-size: 20px;
+    font-family: "Consolas", "Inconsolata", monospace;
+}
+
+#image-container {
     display: block;
     width: 100%;
     margin: 0px;
     padding: 0px;
 }
 
-#stimuli {
-    margin: 0px;
+#add-image {
+    margin: 0px 0px 10px 0px;
     padding: 0px;
     display: block;
     width: 100%;

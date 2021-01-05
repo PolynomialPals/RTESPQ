@@ -1,8 +1,7 @@
 
 var ans;
 var tag;
-var choice = "random";
-var done = [];
+var pool = [];
 
 
 function getRndInteger(min, max) {
@@ -48,25 +47,28 @@ function checkRight(e) {
     setTips();
 }
 
-function selectQuestion() {
-    if (choice === "random") {
-        var pool = tag["menu"]["all"];
-    }
-    else if (choice === "random-cat") {
-
-    }
-    return tag[pool[getRndInteger(0, pool.length)]];
-}
-
 function getNextQuestion() {
     document.getElementById("next").style.display = "none";
-    var quest = selectQuestion();
+    if (pool.length == 0) {
+        setQuestionPool();
+        if (pool.length == 0) {
+            document.getElementById("question").textContent = "Error: No questions available";
+            return;
+        }
+    }
+    var quest = tag[pool[getRndInteger(0, pool.length)]];
     updateQuest(quest["q"], quest["a"], quest["b"], quest["c"], quest["d"], quest["answer"]);
-    if (quest["pic"] !== "") {
-        document.getElementById("question-image").innerHTML = "<img style='width: 100%' id='stimuli' src='ref-imgx/" + quest["pic"] + "'>";
+    if (quest["code-sample"] !== "") {
+        document.getElementById("code-container").textContent = quest["code-sample"];
     }
     else {
-        document.getElementById("question-image").innerHTML = "";
+        document.getElementById("code-container").textContent = "";
+    }
+    if (quest["pic"] !== "") {
+        document.getElementById("image-container").innerHTML = "<img style='width: 100%' id='add-image' src='ref-imgx/" + quest["pic"] + "'>";
+    }
+    else {
+        document.getElementById("image-container").innerHTML = "";
     }
     document.getElementById("tips").style.display = "none";
     document.getElementById("tip-cover").style.display = "block";
@@ -74,7 +76,25 @@ function getNextQuestion() {
     document.getElementById("page-val").textContent = quest["page"];
 }
 
+function setQuestionPool() {
+    var categories = document.getElementsByClassName("src-cpt");
+    console.log(categories);
+    pool = [];
+    var at_least_one = false;
+    for (var i = 0; i < categories.length; i++) {
+        if (categories[i].checked) {
+            at_least_one = true;
+            pool.push(...tag["menu"]["byChapter"][categories[i].value]);
+        }
+    }
+    if (at_least_one == false) {
+        pool.push(...tag["menu"]["all"]);
+    }
+}
+
+
 function init() {
+    setQuestionPool();
     getNextQuestion();
 }
 

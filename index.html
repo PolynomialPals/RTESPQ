@@ -10,104 +10,106 @@
 <div id="header">
     <h1>Robotics Theory Exam Sample Practice Questions</h1>
 </div>
-
-<div id="left-col">
-    <div id="chapter-choice">
-        <h3>Select Question Types:</h3>
-            <label>
-                <input type="checkbox" id="src-cpt-1" class="src-cpt" value="1" checked>
-                Chapter 1
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-2" class="src-cpt" value="2" checked>
-                Chapter 2
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-3" class="src-cpt" value="3" checked>
-                Chapter 3
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-4" class="src-cpt" value="4" checked>
-                Chapter 4
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-5" class="src-cpt" value="5" checked>
-                Chapter 5
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-6" class="src-cpt" value="6" checked>
-                Chapter 6
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-7" class="src-cpt" value="7" checked>
-                Chapter 7
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-14" class="src-cpt" value="14" checked>
-                Chapter 14
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-15" class="src-cpt" value="15" checked>
-                Chapter 15
-            </label><br>
-            <label>
-                <input type="checkbox" id="src-cpt-py" class="src-cpt" value="python" checked>
-                Python
-            </label><br>
+<div id="main-section">
+    <div id="left-col">
+        <div id="chapter-choice">
+            <h3>Select Question Types:</h3>
+                <label>
+                    <input type="checkbox" id="src-cpt-1" class="src-cpt" value="1" checked onclick="init()">
+                    Chapter 1
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-2" class="src-cpt" value="2" checked onclick="init()">
+                    Chapter 2
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-3" class="src-cpt" value="3" checked onclick="init()">
+                    Chapter 3
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-4" class="src-cpt" value="4" checked onclick="init()">
+                    Chapter 4
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-5" class="src-cpt" value="5" checked onclick="init()">
+                    Chapter 5
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-6" class="src-cpt" value="6" checked onclick="init()">
+                    Chapter 6
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-7" class="src-cpt" value="7" checked onclick="init()">
+                    Chapter 7
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-14" class="src-cpt" value="14" checked onclick="init()">
+                    Chapter 14
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-15" class="src-cpt" value="15" checked onclick="init()">
+                    Chapter 15
+                </label><br>
+                <label>
+                    <input type="checkbox" id="src-cpt-py" class="src-cpt" value="python" checked onclick="init()">
+                    Python
+                </label><br>
+        </div>
     </div>
-</div>
-<div id="content">
-    <h2 id="question">Question Loading...</h2>
-    <div id="answers">
-        <div class="container">
-            <label class="cont">
-                <input type="button" class="choice" id="a" value="A">
+    <div id="content">
+        <h2 id="question">Question Loading...</h2>
+        <div id="answers">
+            <div class="container">
+                <label class="cont">
+                    <input type="button" class="choice" id="a" value="A">
+                </label>
+                <img src="cross2.svg" class="cross" id="crs-a" alt="Option A is incorrect">
+                <img src="tick2.svg" class="cross" id="tic-a" alt="Option A is correct">
+            </div>
+            <div class="container">
+                <label class="cont">
+                    <input type="button" class="choice" id="b" value="B">
+                </label>
+                <img src="cross2.svg" class="cross" id="crs-b" alt="Option A is incorrect">
+                <img src="tick2.svg" class="cross" id="tic-b" alt="Option B is correct">
+            </div>
+            <div class="container">
+                <label class="cont">
+                    <input type="button" class="choice" id="c" value="C">
+                </label>
+                <img src="cross2.svg" class="cross" id="crs-c" alt="Option A is incorrect">
+                <img src="tick2.svg" class="cross" id="tic-c" alt="Option C is correct">
+            </div>
+            <div class="container">
+                <label class="cont">
+                    <input type="button" class="choice" id="d" value="D">
+                </label>
+                <img src="cross2.svg" class="cross" id="crs-d" alt="Option A is incorrect">
+                <img src="tick2.svg" class="cross" id="tic-d" alt="Option D is correct">
+            </div>
+            <label>
+                <input type="button" id="next" value="NEXT">
             </label>
-            <img src="cross2.svg" class="cross" id="crs-a" alt="Option A is incorrect">
-            <img src="tick2.svg" class="cross" id="tic-a" alt="Option A is correct">
         </div>
-        <div class="container">
-            <label class="cont">
-                <input type="button" class="choice" id="b" value="B">
-            </label>
-            <img src="cross2.svg" class="cross" id="crs-b" alt="Option A is incorrect">
-            <img src="tick2.svg" class="cross" id="tic-b" alt="Option B is correct">
-        </div>
-        <div class="container">
-            <label class="cont">
-                <input type="button" class="choice" id="c" value="C">
-            </label>
-            <img src="cross2.svg" class="cross" id="crs-c" alt="Option A is incorrect">
-            <img src="tick2.svg" class="cross" id="tic-c" alt="Option C is correct">
-        </div>
-        <div class="container">
-            <label class="cont">
-                <input type="button" class="choice" id="d" value="D">
-            </label>
-            <img src="cross2.svg" class="cross" id="crs-d" alt="Option A is incorrect">
-            <img src="tick2.svg" class="cross" id="tic-d" alt="Option D is correct">
-        </div>
-        <label>
-            <input type="button" id="next" value="NEXT">
-        </label>
-    </div>
-    <div id="right-col">
-        <div id="question-image">
+        <div id="right-col">
+            <div id="code-container">
 
-        </div>
-        <div>
-            <button id="tip-cover">Source Info</button>
-            <div id="tips">
-                <p>
-                    Chapter:<br><span id="chapter-val"></span><br>
-                    Page:<br><span id="page-val"></span>
-                </p>
+            </div>
+            <div id="image-container">
+
+            </div>
+            <div>
+                <button id="tip-cover">Source Info</button>
+                <div id="tips">
+                    <p>
+                        Chapter:<br><span id="chapter-val"></span><br>
+                        Page:<br><span id="page-val"></span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
 <script src="script.js"></script>
 </body>
 </html>
