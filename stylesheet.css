@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap');
 
 * {
     margin: 0;
@@ -17,23 +17,31 @@ h1 {
     font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
     color: white;
     font-weight: normal;
-    margin: auto 10px;
+    margin: 10px;
     font-size: 20px;
     line-height: 100%;
 }
 
 #header {
     margin: 0px;
-    padding: 0px;
+    padding-bottom: 0px;
     background-color: #0b3963;
     width: 100%;
-    height: 35px;
+    min-height: 35px;
     line-height: 30px;
 }
+
+
 
 body {
     margin: 0px;
     padding: 0px;
+}
+
+#nav-button-block {
+    horiz-align: right;
+    display: inline-block;
+    padding: 5px 0px;
 }
 
 .header-row {
@@ -52,7 +60,7 @@ body {
     font-weight: 300;
     line-height: 100%;
     position: relative;
-    top: 2px;
+    /*top: 2px;*/
 
 }
 
@@ -74,173 +82,4 @@ body {
     margin: 0px auto;
 }
 
-
-/*///////////////////////////////////////*/
-
-#left-col {
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 5px;
-    width: 18%;
-    display: inline-block;
-}
-
-#main-section {
-    background-color: rgb(222, 222, 222);
-    min-height: calc(100vh - 70px);
-}
-
-#content {
-    margin: 0px;
-    padding: 5px;
-    background-color: rgb(240, 255, 255);
-    display: inline-block;
-    vertical-align: top;
-    width: 80%;
-    height: max-content;
-    min-height: calc(100vh - 70px);
-    font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
-}
-
-#answers {
-    display: inline-block;
-    vertical-align: top;
-    margin: 30px 5px 20px 20px;
-    font-size: 20px;
-    line-height: 40px;
-    width: 50%;
-}
-
-.container {
-    margin: 0px;
-    padding: 0px;
-}
-
-#question {
-    font-weight: normal;
-    margin: 10px 20px;
-}
-
-.choice {
-    width: 80%;
-    white-space: normal;
-    margin: 0px;
-    padding: 20px;
-    border-top: solid 2px #65afd6;
-    font-size: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: rgb(240, 255, 255);
-    font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
-}
-
-#d {
-    border-bottom: solid 2px #65afd6;
-}
-
-.choice:hover {
-    background-color: #65afd6;
-}
-
-.choice:active {
-    background-color: white;
-}
-
-.choice:disabled {
-    color: black;
-}
-
-.cross {
-    width: 10%;
-    display: none;
-    vertical-align: middle;
-    margin: auto 4%;
-    padding: 0px;
-}
-
-#next {
-    width: 80%;
-    margin: 40px 0px 0px 0px;
-    background-color: #0b3963;
-    color: white;
-    padding: 25px;
-    font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
-    font-size: 30px;
-    display: none;
-}
-
-#next:hover {
-    background-color: #65afd6;
-}
-
-#right-col {
-    display: inline-block;
-    vertical-align: top;
-    width: 46%;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 10px 0px;
-}
-
-#code-container {
-    display: block;
-    margin: 0px 0px 20px 0px;
-    padding: 5px;
-    white-space: pre-wrap;
-    font-size: 20px;
-    font-family: "Consolas", "Inconsolata", monospace;
-}
-
-#image-container {
-    display: block;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
-
-#add-image {
-    margin: 0px 0px 10px 0px;
-    padding: 0px;
-    display: block;
-    width: 100%;
-}
-
-#tips {
-    margin: auto auto;
-    padding: 0px;
-    border: solid 2px #0b3963;
-    border-radius: 5px;
-    background-color: white;
-    width: 196px;
-    height: 146px;
-    display: none;
-    line-height: 1.5;
-    font-size: 18px;
-    text-align: center;
-}
-
-#tip-cover {
-    margin: auto auto;
-    padding: 0px;
-    border: solid 2px #0b3963;
-    border-radius: 5px;
-    background-color: white;
-    width: 200px;
-    height: 150px;
-    font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
-}
-
-#tip-cover:hover {
-    background-color: #0b3963;
-    color: white;
-}
-
-#chapter-choice {
-    margin: 15px;
-    font-family: "Zilla Slab", "Inconsolata", "Helvetica", "Arial", sans-serif;
-    font-size: 15px;
-    font-weight: normal;
-    line-height: 1.5;
-
-}
 
